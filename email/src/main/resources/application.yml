@@ -1,0 +1,25 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 5555
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/AliShiyyab?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+
+logging:
+  level:
+    org:
+      springframework:
+        security=DEBUG
